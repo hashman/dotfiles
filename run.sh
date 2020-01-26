@@ -13,3 +13,6 @@ info 'Install vim...'
 
 info 'Install zsh...'
 ./oh-my-zsh/install.sh
+
+info 'Install git...'
+./git/install.sh
