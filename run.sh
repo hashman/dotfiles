@@ -22,3 +22,6 @@ info 'Install tig...'
 
 info 'Install tmux...'
 ./tmux/install.sh
+
+info 'Install mypager...'
+./mypager/install.sh
