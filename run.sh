@@ -19,3 +19,6 @@ info 'Install git...'
 
 info 'Install tig...'
 ./tig/install.sh
+
+info 'Install tmux...'
+./tmux/install.sh
