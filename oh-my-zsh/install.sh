@@ -1,12 +1,7 @@
 #!/bin/bash
 
-runScript () {
-    if [[ `whoami` == "root" ]]; then
-        $1
-    else
-        sudo $1
-    fi
-}
+BASEDIR=$(dirname "$0")
+source $BASEDIR/../func.sh
 
 export CHSH=no
 

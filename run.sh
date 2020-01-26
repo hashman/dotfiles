@@ -16,3 +16,6 @@ info 'Install zsh...'
 
 info 'Install git...'
 ./git/install.sh
+
+info 'Install tig...'
+./tig/install.sh
