@@ -8,3 +8,9 @@ Hash's dotfiles
 - git
 - make
 - gcc
+
+## Usage
+
+```
+./run.sh
+```
