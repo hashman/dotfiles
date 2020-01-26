@@ -10,3 +10,6 @@ info 'Installing dotfiles...'
 
 info 'Install vim...'
 ./vim/install.sh
+
+info 'Install zsh...'
+./oh-my-zsh/install.sh
