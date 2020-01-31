@@ -34,6 +34,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
