@@ -2,6 +2,10 @@ set encoding=utf8
 set relativenumber
 set number
 
+" Searching
+set hlsearch
+set incsearch
+
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
 let g:vim_bootstrap_langs = "html,javascript,php"
