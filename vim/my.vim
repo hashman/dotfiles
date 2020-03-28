@@ -20,6 +20,8 @@ if !filereadable(vimplug_exists)
     autocmd VimEnter * PlugInstall
 endif
 
+set rtp +=~/.vim
+
 " Required:
 call plug#begin(expand('~/.vim/plugged'))
 

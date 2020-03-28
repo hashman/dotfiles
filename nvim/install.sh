@@ -4,6 +4,9 @@ BASEDIR=$(dirname "$0")
 mkdir -p ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
+mkdir ~/.nvim
+ln -s ~/.vim/autoload ~/.nvim/autoload
+
 # Install vim-gitgutter
 mkdir -p ~/.config/nvim/pack/airblade/start
 cd ~/.config/nvim/pack/airblade/start
