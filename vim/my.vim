@@ -1,6 +1,7 @@
 set encoding=utf8
 set relativenumber
 set number
+set backspace=indent,eol,start
 
 " Searching
 set hlsearch
