@@ -66,6 +66,7 @@ alias ddbrs='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout st
 alias ddbrd='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout develop && git branch -D $current_branch'
 alias ddbrt='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout testing && git branch -D $current_branch'
 alias ddbrm='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout master && git branch -D $current_branch'
+alias ddbrmm='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout main && git branch -D $current_branch'
 alias gl_hash='git pull hash $(git_current_branch)'
 alias gpc='git push origin $(git_current_branch)'
 alias gpc_hash='git push hash $(git_current_branch)'
