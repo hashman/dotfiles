@@ -21,8 +21,6 @@ if !filereadable(vimplug_exists)
     autocmd VimEnter * PlugInstall
 endif
 
-set rtp +=~/.vim
-
 " Required:
 call plug#begin(expand('~/.vim/plugged'))
 
@@ -39,7 +37,8 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'StanAngeloff/php.vim'
+Plug 'hashivim/vim-terraform'
+Plug 'rking/ag.vim'
 
 call plug#end()
 
@@ -48,6 +47,10 @@ set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
+
+"" terraform
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
 
 "" Customize tab spaces setting
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
