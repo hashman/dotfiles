@@ -39,6 +39,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'hashivim/vim-terraform'
 Plug 'rking/ag.vim'
+Plug 'mogelbrod/vim-jsonpath'
+
+" Define mappings for json buffers
+au FileType json noremap <buffer> <silent> <leader>d :call jsonpath#echo()<CR>
+au FileType json noremap <buffer> <silent> <leader>g :call jsonpath#goto()<CR>
 
 call plug#end()
 
