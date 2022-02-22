@@ -60,6 +60,7 @@ let g:terraform_fmt_on_save=1
 "" Customize tab spaces setting
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+au BufNewFile,BufRead,BufReadPost *.json set syntax=json foldmethod=syntax
 
 let mapleader=','
 
