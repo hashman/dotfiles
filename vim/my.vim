@@ -96,13 +96,12 @@ augroup vimrc-remember-cursor-position
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
 
-""" vim-jsbeautify
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType javascript noremap <Leader> <c-f> :call JsBeautify()<cr>
 " for json
-autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+autocmd FileType json noremap <Leader> <c-f> :call JsonBeautify()<cr>
 " for jsx
-autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+autocmd FileType jsx noremap <Leader> <c-f> :call JsxBeautify()<cr>
 " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType html noremap <Leader> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType css noremap <Leader> <c-f> :call CSSBeautify()<cr>
