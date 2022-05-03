@@ -40,6 +40,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'hashivim/vim-terraform'
 Plug 'rking/ag.vim'
 Plug 'mogelbrod/vim-jsonpath'
+Plug 'maksimr/vim-jsbeautify'
 
 " Define mappings for json buffers
 au FileType json noremap <buffer> <silent> <leader>d :call jsonpath#echo()<CR>
@@ -93,3 +94,14 @@ augroup vimrc-remember-cursor-position
     autocmd!
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
+
+""" vim-jsbeautify
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for json
+autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+" for jsx
+autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
