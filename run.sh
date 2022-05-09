@@ -28,3 +28,6 @@ info 'Install mypager...'
 
 info 'Install helm plugin...'
 ./helm/install.sh
+
+info 'Install arkade plugin...'
+./arkade/install.sh
