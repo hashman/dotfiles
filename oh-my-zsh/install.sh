@@ -21,3 +21,5 @@ git clone -c core.eol=lf -c core.autocrlf=false \
 		-c fetch.fsck.zeroPaddedFilemode=ignore \
 		-c receive.fsck.zeroPaddedFilemode=ignore \
 		--depth=1 --branch master https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+
+mkdir -p ~/.oh.my-zsh/custom/plugins
