@@ -25,3 +25,6 @@ info 'Install tmux...'
 
 info 'Install mypager...'
 ./mypager/install.sh
+
+info 'Install helm plugin...'
+./helm/install.sh
