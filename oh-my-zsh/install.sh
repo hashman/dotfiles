@@ -23,3 +23,8 @@ git clone -c core.eol=lf -c core.autocrlf=false \
 		--depth=1 --branch master https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 
 mkdir -p ~/.oh.my-zsh/custom/plugins
+
+# Start install some plugin
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/tom-auger/cmdtime ~/.oh-my-zsh/custom/plugins/cmdtime
