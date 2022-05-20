@@ -8,6 +8,16 @@ info () {
 
 info 'Installing dotfiles...'
 
+if [ ! -d "~/bin" ]; then
+    info 'bin folder not exist, create bin folder'
+    mkdir ~/bin
+fi
+
+if [ ! -d "~/local" ]; then
+    info 'local folder not exist, create local folder'
+    mkdir ~/local
+fi
+
 while true; do
     read -p "Do you want to install vim? (y/n) " yn
     case $yn in
