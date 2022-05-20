@@ -8,26 +8,66 @@ info () {
 
 info 'Installing dotfiles...'
 
-info 'Install vim...'
-./vim/install.sh
+while true; do
+    read -p "Do you want to install vim? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install vim...'; ./vim/install.sh; break;;
+        * ) break;;
+    esac
+done
 
-info 'Install zsh...'
-./oh-my-zsh/install.sh
+while true; do
+    read -p "Do you want to install zsh? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install zsh...'; ./oh-my-zsh/install.sh; break;;
+        * ) break;;
+    esac
+done
 
-info 'Install git...'
-./git/install.sh
+while true; do
+    read -p "Do you want to install git? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install git...'; ./git/install.sh; break;;
+        * ) break;;
+    esac
+done
 
-info 'Install tig...'
-./tig/install.sh
+while true; do
+    read -p "Do you want to install tig? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install tig...'; ./tig/install.sh; break;;
+        * ) break;;
+    esac
+done
 
-info 'Install tmux...'
-./tmux/install.sh
+while true; do
+    read -p "Do you want to install tmux? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install tmux...'; ./tmux/install.sh; break;;
+        * ) break;;
+    esac
+done
 
-info 'Install mypager...'
-./mypager/install.sh
+while true; do
+    read -p "Do you want to install mypager? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install mypager...'; ./mypager/install.sh; break;;
+        * ) break;;
+    esac
+done
 
-info 'Install helm plugin...'
-./helm/install.sh
+while true; do
+    read -p "Do you want to install helm plugin? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install helm plugin...'; ./helm/install.sh; break;;
+        * ) break;;
+    esac
+done
 
-info 'Install arkade plugin...'
-./arkade/install.sh
+while true; do
+    read -p "Do you want to install arkade plugin? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install arkade plugin...'; ./arkade/install.sh; break;;
+        * ) break;;
+    esac
+done
