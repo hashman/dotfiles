@@ -81,3 +81,11 @@ while true; do
         * ) break;;
     esac
 done
+
+while true; do
+    read -p "Do you want to install awscli? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install awscli...'; ./awscli/install.sh; break;;
+        * ) break;;
+    esac
+done
