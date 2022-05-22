@@ -10,6 +10,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew install pyenv
 fi
 
-exec zsh
 pyenv install 3.8.12
 pyenv shell 3.8.12
