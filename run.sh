@@ -14,6 +14,7 @@ exec_arkade () { ./arkade/install.sh; }
 exec_awscli () { ./awscli/install.sh; }
 exec_tree () { ./tree/install.sh; }
 exec_pyenv () { ./pyenv/install.sh; }
+exec_zsh_autojump () { ./oh-my-zsh-auto-jump/install.sh; }
 
 info 'Installing dotfiles...'
 
@@ -36,6 +37,14 @@ while true; do
 done
 
 while true; do
+    read -p "Do you want to install zsh? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install zsh...'; exec_zsh; break;;
+        * ) break;;
+    esac
+done
+
+while true; do
     read -p "Do you want to install pyenv? (y/n) " yn
     case $yn in
         [Yy]* ) info 'Install pyenv...'; exec_pyenv; break;;
@@ -44,9 +53,9 @@ while true; do
 done
 
 while true; do
-    read -p "Do you want to install zsh? (y/n) " yn
+    read -p "Do you want to install zsh autojump? (y/n) " yn
     case $yn in
-        [Yy]* ) info 'Install zsh...'; exec_zsh; break;;
+        [Yy]* ) info 'Install zsh autojump...'; exec_zsh_autojump; break;;
         * ) break;;
     esac
 done
