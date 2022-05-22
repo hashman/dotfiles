@@ -13,6 +13,7 @@ exec_helm () { ./helm/install.sh; }
 exec_arkade () { ./arkade/install.sh; }
 exec_awscli () { ./awscli/install.sh; }
 exec_tree () { ./tree/install.sh; }
+exec_pyenv () { ./pyenv/install.sh; }
 
 info 'Installing dotfiles...'
 
@@ -30,6 +31,14 @@ while true; do
     read -p "Do you want to install vim? (y/n) " yn
     case $yn in
         [Yy]* ) info 'Install vim...'; exec_vim; break;;
+        * ) break;;
+    esac
+done
+
+while true; do
+    read -p "Do you want to install pyenv? (y/n) " yn
+    case $yn in
+        [Yy]* ) info 'Install pyenv...'; exec_pyenv; break;;
         * ) break;;
     esac
 done
