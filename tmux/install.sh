@@ -9,8 +9,6 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     make install
     # clean
     cd .. && rm -rf tmux-2.6.tar.gz tmux-2.6
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    brew install tmux
 fi
 
 cp $BASEDIR/tmux/tmux.conf ~/.tmux.conf
