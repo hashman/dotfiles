@@ -13,4 +13,4 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew install tmux
 fi
 
-cp $BASEDIR/tmux.conf ~/.tmux.conf
+cp $BASEDIR/tmux/tmux.conf ~/.tmux.conf
