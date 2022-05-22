@@ -9,4 +9,4 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew install tig
 fi
 
-cp $BASEDIR/tig.rc ~/.tigrc
+cp $BASEDIR/tigrc ~/.tigrc
