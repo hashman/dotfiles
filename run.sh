@@ -34,7 +34,7 @@ case $package in
         fi
 
         info 'Installing dotfiles for pre-install...'
-        packages=(oh-my-zsh pyenv oh-my-zsh-auto-jump phpbrew)
+        packages=(curl oh-my-zsh pyenv oh-my-zsh-auto-jump phpbrew)
         for pack in "${packages[@]}"; do
             while true; do
                 read -p "Do you want to install $pack? (y/n) " yn
