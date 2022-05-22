@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source print_style.sh
 DOTFILES_ROOT=$(pwd -P)
 
 exec_cmd () { ./$1/install.sh; }

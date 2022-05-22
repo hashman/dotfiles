@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
+source print_style.sh
 package=$1
-
 DOTFILES_ROOT=$(pwd -P)
 
-info () { printf "\r  [ \033[00;34m..\033[0m ] $1\n"; }
 exec_cmd () { ./$1/install.sh; }
 
 case $package in
@@ -25,7 +24,7 @@ case $package in
         if [ -d "$package" ]; then
             exec_cmd $package
         else
-            info 'package not found...'
+            warning 'package not found...'
         fi
         ;;
 esac
