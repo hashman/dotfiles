@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-curl -sLS https://get.arkade.dev | sudo sh
+CURRENT_PATH=$(pwd)
+
+cd /tmp && curl -sLS https://get.arkade.dev | sh
+mv arkade $HOME/bin
 arkade get k9s
 arkade get eksctl
 arkade get kustomize
