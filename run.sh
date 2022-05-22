@@ -6,93 +6,26 @@ DOTFILES_ROOT=$(pwd -P)
 
 info () { printf "\r  [ \033[00;34m..\033[0m ] $1\n"; }
 exec_cmd () { ./$1/install.sh; }
-exec_vim () { ./vim/install.sh; }
-exec_git () { ./git/install.sh; }
-exec_tig () { ./tig/install.sh; }
-exec_tmux () { ./tmux/install.sh; }
-exec_mypager () { ./mypager/install.sh; }
-exec_helm () { ./helm/install.sh; }
-exec_arkade () { ./arkade/install.sh; }
-exec_awscli () { ./awscli/install.sh; }
-exec_tree () { ./tree/install.sh; }
 
 case $package in
     all)
         info 'Installing dotfiles...'
-
-        while true; do
-            read -p "Do you want to install vim? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install vim...'; exec_vim; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install git? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install git...'; exec_git; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install tig? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install tig...'; exec_tig; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install tmux? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install tmux...'; exec_tmux; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install mypager? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install mypager...'; exec_mypager; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install arkade plugin? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install arkade plugin...'; exec_arkade; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install helm plugin? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install helm plugin...'; exec_helm; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install awscli? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install awscli...'; exec_awscli; break;;
-                * ) break;;
-            esac
-        done
-
-        while true; do
-            read -p "Do you want to install tree? (y/n) " yn
-            case $yn in
-                [Yy]* ) info 'Install tree...'; exec_tree; break;;
-                * ) break;;
-            esac
+        packages=(vim git tig tmux mypager arkade helm awscli tree)
+        for pack in "${packages[@]}"; do
+            while true; do
+                read -p "Do you want to install $pack? (y/n) " yn
+                case $yn in
+                    [Yy]* ) info "Install $pack..."; exec_cmd $pack; break;;
+                    * ) break;;
+                esac
+            done
         done
         ;;
     *)
-        exec_cmd $package
+        if [ -d "$package" ]; then
+            exec_cmd $package
+        else
+            info 'package not found...'
+        fi
         ;;
 esac
