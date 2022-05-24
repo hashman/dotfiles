@@ -9,7 +9,7 @@ exec_cmd () { ./$1/install.sh; }
 case $package in
     all)
         info 'Installing dotfiles...'
-        packages=(vim git-config tig tmux mypager arkade helm awscli tree commitizen openssl-1.1.1g php80 ag tfenv)
+        packages=(vim git-config tig tmux mypager arkade helm awscli tree commitizen openssl-1.1.1g php80 ag tfenv nvm)
         for pack in "${packages[@]}"; do
             while true; do
                 read -p "Do you want to install $pack? (y/n) " yn
