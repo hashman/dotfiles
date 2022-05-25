@@ -60,8 +60,11 @@ autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 let mapleader=','
 
+"" vim-fugitive
+noremap <leader>g :Git blame<CR>
+
 "" NERDTree configuration
-noremap <leader>g :NERDTreeToggle<CR>
+noremap <leader>m :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
 
 "" ctrlp.vim
