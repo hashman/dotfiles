@@ -9,5 +9,6 @@ arkade get eksctl
 arkade get kustomize
 arkade get argocd
 arkade get helm
+arkade get kubectl
 
 echo "Install arkade and plugin done..."
