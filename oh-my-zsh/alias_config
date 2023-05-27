@@ -24,6 +24,21 @@ docker_tags() {
 
 # git alias
 
+delbr() {
+    local_branch=$1
+
+    if [ -z "$local_branch" ]; then
+        echo "Usage: delbr <branch>"
+        return 1
+    fi
+
+    git fetch origin
+    git branch -d "$local_branch"
+    git push origin --delete "$local_branch"
+    git fetch origin
+}
+
+
 tagged() {
     date_time=`date +"%Y%m%d_%H%M"`
     git tag -a tested_$date_time -m ''
