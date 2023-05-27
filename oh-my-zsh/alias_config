@@ -33,7 +33,7 @@ delbr() {
     fi
 
     git fetch origin
-    git branch -d "$local_branch"
+    git branch -D "$local_branch"
     git push origin --delete "$local_branch"
     git fetch origin
 }
