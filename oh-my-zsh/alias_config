@@ -64,7 +64,7 @@ alias gd='git diff'
 alias ga='git add .'
 alias gref='git reflog'
 alias gpick='git cherry-pick'
-alias fixup='git add . && git commit -m "fixup"'
+alias fixup='git add . && git commit -m "fix: fixup"'
 alias ddbr=ddbr
 alias ddbrs='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout staging && git branch -D $current_branch'
 alias ddbrd='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout develop && git branch -D $current_branch'
