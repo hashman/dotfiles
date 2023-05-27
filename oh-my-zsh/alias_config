@@ -49,18 +49,6 @@ diff_with_filename() {
     git diff $1 $current_branch --name-only
 }
 
-function perf {
-  curl -o /dev/null -s -w "%{time_connect} + %{time_starttransfer} = %{time_total}\n" "$1"
-}
-
-traveling() {
-    # start seq $1
-    # end seq $2
-    # server name $3
-    # command $4
-    for i in $(seq $1 $2); do echo "==== $3-$i ====" && ssh $3-$i $4; done;
-}
-
 ddbr() {
     current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout $1 && git branch -D $current_branch
 }
@@ -89,10 +77,8 @@ alias gpc_hash='git push hash $(git_current_branch)'
 alias gpfc='git push -f origin $(git_current_branch)'
 alias gpfc_hash='git push -f hash $(git_current_branch)'
 alias gdof=diff_with_filename
-alias curl_time=perf
 alias gls='git log --graph --pretty=format:"%h <%an> %ar %s"'
 alias gtags='git tag --sort=-creatordate'
-alias hash_travel=traveling
 
 deploy() {
     if [ $# -eq 3 ]
